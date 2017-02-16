@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Administrate.Models.BuildingModel>
+
+@{
+    ViewBag.Title = "Edificios";
+}
+
+<h2>Edificios</h2>
+
+<p>
+    @Html.ActionLink("Agregar edificios", "NewBuildingByAdminCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cuit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cuit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", "BuildingModels", new { id=item.BuildingID },null ) |
+            @Html.ActionLink("Details", "Details", "BuildingModels", new { id = item.BuildingID }, null) |
+            @Html.ActionLink("Delete", "Delete", "BuildingModels", new { id = item.BuildingID }, null)
+        </td>
+    </tr>
+}
+
+</table>
+

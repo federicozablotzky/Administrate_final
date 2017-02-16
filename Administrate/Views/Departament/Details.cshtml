@@ -1,0 +1,58 @@
+﻿@model Administrate.Models.DepartamentoModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DepartamentoModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Floor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Floor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentNumberLetter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentNumberLetter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaOfThePropertyCover)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaOfThePropertyCover)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasGarage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasGarage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

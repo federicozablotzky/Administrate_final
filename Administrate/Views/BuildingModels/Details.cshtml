@@ -1,0 +1,53 @@
+﻿@model Administrate.Models.BuildingModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BuildingModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cuit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", "BuildingModels", new { id = Model.BuildingID }, new { @class = "btn btn-default" }) |
+    @Html.ActionLink("Agregar Departamento", "Create", "Departament", new { id = Model.BuildingID }, new { @class = "btn btn-default" })
+    @Html.ActionLink("Back to List", "Index","Manage")
+</p>
+
+@Html.Action("DepartmentByBuilding", new {Id = Model.BuildingID })

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Administrate.Models.DepartamentoModel>
+
+@{
+    ViewBag.Title = "Departamentos";
+}
+
+<h2>Departamentos</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Floor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentNumberLetter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaOfThePropertyCover)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasGarage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Floor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartmentNumberLetter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaOfThePropertyCover)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HasGarage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", "Departament", new { id = item.ID }, null) |
+            @Html.ActionLink("Details", "Details", "Departament", new { id = item.ID }, null) |
+            @Html.ActionLink("Delete", "Delete", "Departament", new { id = item.ID }, null)
+        </td>
+    </tr>
+}
+
+</table>

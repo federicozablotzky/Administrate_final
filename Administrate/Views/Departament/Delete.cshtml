@@ -1,0 +1,64 @@
+﻿@model Administrate.Models.DepartamentoModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DepartamentoModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Floor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Floor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentNumberLetter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentNumberLetter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaOfThePropertyCover)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaOfThePropertyCover)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasGarage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasGarage)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index", "Manage")
+        </div>
+    }
+</div>
