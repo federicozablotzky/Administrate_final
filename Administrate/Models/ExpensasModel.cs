@@ -7,5 +7,6 @@ namespace Administrate.Models
 {
     public class ExpensasModel
     {
+       
     }
 }
