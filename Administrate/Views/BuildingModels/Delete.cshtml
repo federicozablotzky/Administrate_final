@@ -49,8 +49,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index", "Manage")
+            <input type="submit" value="Borrar edificio" class="btn btn-default" /> |
+            @Html.ActionLink("Volver al perfil", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </div>
     }
 </div>

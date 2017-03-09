@@ -13,12 +13,16 @@ namespace Administrate.Models
         [Key]
         public int BuildingID { get; set; }
 
+        [Display(Name = "Cuit")]
         public int Cuit { get; set; }
 
+        [Display(Name = "Telefono")]
         public int Telephone { get; set; }
 
+        [Display(Name = "Direccion")]
         public string Address { get; set; }
 
+        [Display(Name = "Categoria")]
         public Categorys Category { get; set; }
 
         public string Identity_ID { get; set; }

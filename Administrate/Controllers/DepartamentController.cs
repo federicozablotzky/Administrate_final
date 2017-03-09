@@ -11,6 +11,7 @@ using Administrate.Models;
 
 namespace Administrate.Controllers
 {
+    [Authorize]
     public class DepartamentController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -62,7 +63,9 @@ namespace Administrate.Controllers
                 Building = db.Buildings.Find(departamentoModel.Building_ID);
                 Building.Departments.Add(departamentoModel);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index", "Manage");
+
+                int? edificioInt = departamentoModel.Building_ID;
+                return RedirectToAction("Details", "BuildingModels", edificioInt.GetValueOrDefault());
             }
 
             return View(departamentoModel);
@@ -76,6 +79,7 @@ namespace Administrate.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             DepartamentoModel departamentoModel = await db.Departament.FindAsync(id);
+            
             if (departamentoModel == null)
             {
                 return HttpNotFound();

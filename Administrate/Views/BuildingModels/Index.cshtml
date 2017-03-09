@@ -7,7 +7,7 @@
 <h2>Edificios</h2>
 
 <p>
-    @Html.ActionLink("Agregar edificios", "NewBuildingByAdminCreate")
+    @Html.ActionLink("Agregar edificios", "NewBuildingByAdminCreate",null, new { @class = "btn btn-default" })
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.Category)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", "BuildingModels", new { id=item.BuildingID },null ) |
-            @Html.ActionLink("Details", "Details", "BuildingModels", new { id = item.BuildingID }, null) |
-            @Html.ActionLink("Delete", "Delete", "BuildingModels", new { id = item.BuildingID }, null)
+            @Html.ActionLink("Edit", "Edit", "BuildingModels", new { id=item.BuildingID }, new { @class = "btn btn-default" }) |
+            @Html.ActionLink("Details", "Details", "BuildingModels", new { id = item.BuildingID }, new { @class = "btn btn-default" }) |
+            @Html.ActionLink("Delete", "Delete", "BuildingModels", new { id = item.BuildingID }, new { @class = "btn btn-default" })
         </td>
     </tr>
 }

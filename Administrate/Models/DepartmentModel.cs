@@ -10,19 +10,33 @@ namespace Administrate.Models
     {
         [Key]
         public int ID { get; set; }
-        
+
+        [Required]
+        [Display(Name = "Piso")]
         public int Floor { get; set; }
 
+        [Required]
+        [Display(Name = "Letra y/o numero")]
         public string DepartmentNumberLetter { get; set; }
+
+        [Required]
+        [Display(Name = "Telefono")]
 
         public int Telephone { get; set; }
 
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:P2}")]
+        [Required]
+        [Display(Name = "Porcentage de la propiedad")]
         public decimal AreaOfThePropertyCover { get; set; }
-        
+
+        [Required]
+        [Display(Name = "Tiene garage?")]
         public bool HasGarage { get; set; }
 
-        public int Building_ID { get; set;}
+        [Required]
+        [Display(Name = "Tiene baulera")]
+        public bool HasStorageRoom { get; set; }
+
+        public int Building_ID { get; set; }
 
 
 

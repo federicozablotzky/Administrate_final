@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace Administrate.Models
 {
+    [Authorize]
     public class BuildingModelsController : Controller
     {
       

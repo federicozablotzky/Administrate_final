@@ -17,6 +17,8 @@ namespace Administrate.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Administrate.Models.ExpensasModel> ExpensasModels { get; set; }
     }
 
 

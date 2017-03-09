@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Administrate.Models.DepartamentoModel>
 
 @{
-    ViewBag.Title = "Departamentos";
+    ViewBag.Title = "Departamento";
 }
 
 <h2>Departamentos</h2>
@@ -45,9 +45,9 @@
             @Html.DisplayFor(modelItem => item.HasGarage)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", "Departament", new { id = item.ID }, null) |
-            @Html.ActionLink("Details", "Details", "Departament", new { id = item.ID }, null) |
-            @Html.ActionLink("Delete", "Delete", "Departament", new { id = item.ID }, null)
+            @Html.ActionLink("Edit", "Edit", "Departament", new { id = item.ID },new { @class = "btn btn-default" }) |
+            @Html.ActionLink("Details", "Details", "Departament", new { id = item.ID },new { @class = "btn btn-default" }) |
+            @Html.ActionLink("Delete", "Delete", "Departament", new { id = item.ID },new { @class = "btn btn-default" })
         </td>
     </tr>
 }

@@ -45,9 +45,11 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", "BuildingModels", new { id = Model.BuildingID }, new { @class = "btn btn-default" }) |
-    @Html.ActionLink("Agregar Departamento", "Create", "Departament", new { id = Model.BuildingID }, new { @class = "btn btn-default" })
-    @Html.ActionLink("Back to List", "Index","Manage")
+    @Html.ActionLink("Editar", "Edit", "BuildingModels", new { id = Model.BuildingID }, new { @class = "btn btn-default" }) |
+    @Html.ActionLink("Agregar Departamento", "Create", "Departament", new { id = Model.BuildingID }, new { @class = "btn btn-default" }) |
+   
+    @Html.ActionLink("Volver al perfil", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+ 
 </p>
 
 @Html.Action("DepartmentByBuilding", new {Id = Model.BuildingID })
