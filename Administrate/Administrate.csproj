@@ -179,7 +179,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DepartamentController.cs" />
-    <Compile Include="Controllers\ExpensasModelsController.cs" />
+    <Compile Include="Controllers\ExpensasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -266,11 +266,11 @@
     <Content Include="Views\Departament\Details.cshtml" />
     <Content Include="Views\Departament\Edit.cshtml" />
     <Content Include="Views\Departament\Index.cshtml" />
-    <Content Include="Views\ExpensasModels\Create.cshtml" />
-    <Content Include="Views\ExpensasModels\Delete.cshtml" />
-    <Content Include="Views\ExpensasModels\Details.cshtml" />
-    <Content Include="Views\ExpensasModels\Edit.cshtml" />
-    <Content Include="Views\ExpensasModels\Index.cshtml" />
+    <Content Include="Views\Expensas\Create.cshtml" />
+    <Content Include="Views\Expensas\Delete.cshtml" />
+    <Content Include="Views\Expensas\Details.cshtml" />
+    <Content Include="Views\Expensas\Edit.cshtml" />
+    <Content Include="Views\Expensas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

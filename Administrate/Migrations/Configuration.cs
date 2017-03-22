@@ -11,6 +11,8 @@ namespace Administrate.Migrations
         {
             AutomaticMigrationsEnabled = true;
             ContextKey = "Administrate.Models.ApplicationDbContext";
+            AutomaticMigrationDataLossAllowed = true;
+           
         }
 
         protected override void Seed(Administrate.Models.ApplicationDbContext context)
@@ -20,7 +22,7 @@ namespace Administrate.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-           
+         
             //
         }
     }

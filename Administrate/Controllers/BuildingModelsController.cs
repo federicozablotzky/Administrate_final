@@ -135,6 +135,15 @@ namespace Administrate.Models
             return PartialView("~/Views/Departament/Index.cshtml", buildin.Departments);
         }
 
+        public ActionResult ExpensasByBuilding(int? Id)
+        {
+
+            BuildingModel building = dbcont.Buildings.Find(Id);
+
+
+            return PartialView("~/Views/Expensas/Index.cshtml", building.Expensas);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
