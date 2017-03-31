@@ -64,7 +64,8 @@ namespace Administrate.Controllers
                 Building.Departments.Add(departamentoModel);
                 await db.SaveChangesAsync();
 
-                return RedirectToAction("Details", "BuildingModels", new { id = departamentoModel.Building_ID });
+                int? edificioInt = departamentoModel.Building_ID;
+                return RedirectToAction("Details", "BuildingModels", edificioInt.GetValueOrDefault());
             }
 
             return View(departamentoModel);

@@ -29,8 +29,6 @@ namespace Administrate.Models
 
         public virtual ICollection<DepartamentoModel> Departments { get; set; }
 
-        public virtual ICollection<ExpensasModel> Expensas { get; set; }
-
         public enum Categorys
         {
             Primera,

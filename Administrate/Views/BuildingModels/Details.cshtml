@@ -4,10 +4,11 @@
     ViewBag.Title = "Details";
 }
 
-<h2>@Html.DisplayFor(model => model.Address)</h2>
+<h2>Details</h2>
 
 <div>
-     <hr />
+    <h4>BuildingModel</h4>
+    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Cuit)
@@ -45,16 +46,10 @@
 </div>
 <p>
     @Html.ActionLink("Editar", "Edit", "BuildingModels", new { id = Model.BuildingID }, new { @class = "btn btn-default" }) |
-   
-
-    @Html.ActionLink("Volver al perfil", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" , @class = "btn btn-default"  })
-
-</p>
-<p style="font-size:x-large">Departamentos<p>
     @Html.ActionLink("Agregar Departamento", "Create", "Departament", new { id = Model.BuildingID }, new { @class = "btn btn-default" }) |
-    @Html.Action("DepartmentByBuilding", new { Id = Model.BuildingID })
+   
+    @Html.ActionLink("Volver al perfil", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+ 
+</p>
 
-<p style="font-size:x-large">Expensas<p>
-        @Html.ActionLink("Agregar detalle expensas", "Create", "Expensas", new { id = Model.BuildingID }, new { @class = "btn btn-default" })
-
-        @Html.Action("ExpensasByBuilding", new { Id = Model.BuildingID })
+@Html.Action("DepartmentByBuilding", new {Id = Model.BuildingID })
